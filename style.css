@@ -74,26 +74,43 @@ body {
 }
 
 .buttons {
+  position: absolute; /* Position the buttons relative to the container */
+  bottom: 10%; /* Keep the buttons 10% above the bottom of the image */
+  left: 50%; /* Center the buttons horizontally */
+  transform: translateX(-50%); /* Adjust for perfect centering */
   display: flex;
   justify-content: center;
-  gap: 20px;
-  position: absolute;
-  bottom: 20px;
+  gap: 10px; /* Spacing between buttons */
 }
 
 .btn {
-  padding: 12px 25px;
-  font-size: 1.2rem;
-  color: white;
-  background: #007bff;
+  background: #6a11cb;
+  color: #fff;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
-  background: #0056b3;
+  background: #2575fc;
+}
+
+/* Responsive adjustments for button size */
+@media (max-width: 768px) {
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
 }
 
 #canvas {
